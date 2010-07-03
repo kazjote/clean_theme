@@ -1,5 +1,4 @@
-### Standard Issue by [NodeThirtyThree][1]
+### Kazjote's blog theme
 
-Standard issue is the new default Typo theme starting Typo 5.0
+Theme designed for kazjote's blog (http://kazjote.eu). You can use it after modifing banner :)
 
-[1]: http://www.nodethirtythree.com/
