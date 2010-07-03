@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <%= page_header %>
+  <title><%=h page_title %></title>
+  <%= stylesheet_link_tag '/stylesheets/theme/blueprint/screen.css', :media => 'screen, projection' %>
+  <%= stylesheet_link_tag '/stylesheets/theme/blueprint/print.css', :media => 'print' %>
+  <%= stylesheet_link_tag '/stylesheets/theme/application.css', :media => 'all' %>
+</head>
+
+<body>
+    <!-- start header -->
+    <div id="header">
+        <div id="logo">
+            <h1><%= link_to image_tag('../../../images/theme/baner_top.png'), this_blog.base_url %></h1>
+            <h2><%= this_blog.blog_subtitle %></h2>
+        </div>
+        <div id="menu">
+            <ul class="span-24 last menu clearfix">
+                <li class="page_item <%= 'current_page_item' if (controller.controller_name == "articles" and controller.action_name == "index") %> span-7">
+                    <%= link_to _("Home"), this_blog.base_url %>
+                </li>
+                <li class="page_item <%= 'current_page_item' if (controller.action_name != 'index' and controller.action_name != 'view_page') %> span-7">
+                    <%= link_to _("Articles"), {:controller => "articles", :action => "archives"} if (controller.controller_name != "index" )%>
+                </li>
+                <li class="page_item <%= 'current_page_item' if (controller.controller_name == "articles" and controller.action_name == "view_page" and params[:name].to_s == 'about') %> span-7 last">
+                    <%= link_to _("About"), this_blog.base_url + "/pages/about" %>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end header -->
+
+  <div id="whole-bottom">
+    <div class="container">
+
+      <div id="page" class="span-24 last clearfix">
+        <div id="content" class="span-17">
+          <%= @content_for_layout %>
+          <%= javascript_tag 'show_dates_as_local_time()' %>
+        </div>
+
+        <div class="span-1">
+          <p> </p>
+        </div>
+
+        <div id="sidebar" class="span-6 last clearfix">
+          <!-- sidebar components -->
+          <%= render_sidebars %>
+        </div>
+        <br style="clear:both;" />
+        <div id="footer">
+          <div class="wrap">
+            <p id="legal">
+              <%= _("Designed by %s. ", link_to('kazjote', 'http://kazjote.eu')) %>
+              <%= _("Powered by %s", link_to('typo', 'http://typosphere.org')) %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

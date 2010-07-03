@@ -1,0 +1,70 @@
+body {
+  font-size: 100%;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #FFF; }
+  body h1, body h2, body h3 {
+    font-family: Georgia,serif; }
+  body .CodeRay, body p {
+    margin: 0 0 1em; }
+  body #logo {
+    height: 100px;
+    background-image: url('../../images/theme/gradient-header.png'); }
+    body #logo .center {
+      width: 950px;
+      margin-left: auto;
+      margin-right: auto; }
+      body #logo .center p {
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 300%;
+        margin: 0;
+        padding: 20px 118px 0 0; }
+      body #logo .center img {
+        float: left; }
+  body #menu {
+    position: relative;
+    height: 3.0em;
+    background-image: url('../../images/theme/gradient-menu.png'); }
+    body #menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+    body #menu .menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 920px; }
+    body #menu a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-align: center;
+      margin: 6px;
+      font-size: 150%;
+      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000; }
+    body #menu a:hover {
+      color: #b42d00; }
+  body #whole-bottom {
+    width: 100%;
+    background-image: url('../../images/theme/gradient-top-content.png');
+    background-repeat: repeat-x;
+    overflow: auto;
+    position: relative; }
+  body #page {
+    margin-top: 2em; }
+    body #page .atomentry {
+      border-bottom: 2px solid; }
+      body #page .atomentry .title {
+        margin-bottom: 0; }
+        body #page .atomentry .title a {
+          color: #295925; }
+      body #page .atomentry .author {
+        text-align: right;
+        font-size: 80%;
+        margin-bottom: 2em; }
+  body #sidebar {
+    margin-top: 2em; }
